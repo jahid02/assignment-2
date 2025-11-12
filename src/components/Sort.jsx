@@ -30,14 +30,15 @@ const Sort = ({ handleSortOrder, handleSortBy }) => {
               </label>
               <select
                 id="sort-name"
+                defaultValue="domain"
                 onChange={(e) => handleSortBy(e)}
                 className="mt-1 block w-full rounded-sm border border-neutral-800 bg-neutral-900/60 p-5 text-sm py-2 pl-3 pr-10 text-neutral-400 focus:border-blue-500 focus:outline-none focus:ring-blue-500"
               >
-                <option className="bg-neutral-900 text-white" value="category">
-                  Category
-                </option>
                 <option className="bg-neutral-900 text-white" value="domain">
                   Domain
+                </option>
+                <option className="bg-neutral-900 text-white" value="category">
+                  Category
                 </option>
               </select>
             </div>
@@ -47,6 +48,7 @@ const Sort = ({ handleSortOrder, handleSortBy }) => {
               </label>
               <select
                 id="sort-order"
+                defaultValue="asc"
                 onChange={(e) => handleSortOrder(e)}
                 className="mt-1 block w-full rounded-sm border border-neutral-800 bg-neutral-900/60 p-5 text-sm py-2 pl-3 pr-10 text-neutral-400 focus:border-blue-500 focus:outline-none focus:ring-blue-500"
               >
