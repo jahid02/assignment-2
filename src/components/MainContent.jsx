@@ -1,19 +1,39 @@
 import { useState } from "react";
 import PasswordCards from "./PasswordCards";
 import SearchInput from "./SearchInput";
+import Sort from "./Sort";
 
 const MainContent = ({ passwordsCardData }) => {
   const [search, setSearch] = useState("");
+  const [sortType, setSortType] = useState("asc");
+  const [sortBy, setSortBy] = useState("domain");
 
   const handleSearch = (e) => {
     setSearch(e.target.value);
   };
 
-  if (search.length > 0) {
-    passwordsCardData = passwordsCardData.filter((item) => {
+  const handleSortType = (e) => {
+    setSortType(e.target.value);
+  };
+
+  const handleSortBy = (e) => {
+    setSortBy(e.target.value);
+  };
+
+  let filteredPasswordsCardData = [...passwordsCardData];
+
+  if (filteredPasswordsCardData.length > 0) {
+    filteredPasswordsCardData = filteredPasswordsCardData.filter((item) => {
       return item.domain.toLowerCase().includes(search.toLowerCase()) || item.username.toLowerCase().includes(search.toLowerCase());
     });
   }
+
+  filteredPasswordsCardData = filteredPasswordsCardData.sort((a, b) => {
+    const valA = a[sortBy]?.toLowerCase() ?? "";
+    const valB = b[sortBy]?.toLowerCase() ?? "";
+
+    return sortType === "asc" ? valA.localeCompare(valB) : valB.localeCompare(valA);
+  });
 
   return (
     <main className="p-8">
@@ -24,19 +44,12 @@ const MainContent = ({ passwordsCardData }) => {
             {/* Search Bar */}
             <SearchInput handleSearch={handleSearch} />
 
-            <div className="flex flex-wrap gap-2">
-              <button className="inline-flex items-center gap-2 rounded-2xl border border-neutral-800/80 bg-neutral-900/80 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-neutral-300 transition hover:border-blue-500 hover:text-white">
-                <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 4h18l-8 8v6l-4 4v-8z"></path>
-                </svg>
-                Sort by
-              </button>
-            </div>
+            <Sort handleSortType={handleSortType} handleSortBy={handleSortBy} />
           </div>
         </section>
 
         {/* Password Cards Grid */}
-        <PasswordCards passwordsCardData={passwordsCardData} />
+        <PasswordCards passwordsCardData={filteredPasswordsCardData} />
       </div>
     </main>
   );
