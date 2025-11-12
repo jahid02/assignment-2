@@ -1,4 +1,4 @@
-## ![rocketIcon][rocketicon-shield] How to run
+## How to run
 
 Please follow the below instructions to run this branch in your machine:
 
@@ -21,9 +21,9 @@ Please follow the below instructions to run this branch in your machine:
    npm run dev
    ```
 
-## ![htmlIcon][htmlicon-shield] Project Details
+## Project Details
 
-Vault is a secure secrets management application designed to protect sensitive credentials. It provides a centralized system for storing, accessing, and controlling credentials. Vault ensures that only authorized users and applications can access confidential information, making it an essential tool for modern infrastructure and application security management.
+Vault manager is a secure secrets management application designed to protect sensitive credentials. It provides a centralized system for storing, accessing, and controlling credentials. Vault ensures that only authorized users and applications can access confidential information, making it an essential tool for modern infrastructure and application security management.
 
 - Display a greeting message — “Good Morning,” where “Morning” changes dynamically based on the current time (Morning, Noon, Evening, etc.).
 - Show the current date in the format: Day, Month Date (e.g., Monday, Nov 10).
@@ -39,22 +39,28 @@ Vault is a secure secrets management application designed to protect sensitive c
 - If no results match the search, display a “Not Found” message matching the app’s theme.
 - Implement a Sorting feature with a “Sort By” button allowing sorting by Date or Name in both Ascending and Descending order.
 
-## ![contactIcon][contacticon-shield] Screen short
+## Screen short
 
-##### Display a greeting message — “Good Morning,” where “Morning” changes dynamically based on the current time (Morning, Noon, Evening, etc.).
+##### 1. Display a greeting message — “Good Morning,” where “Morning” changes dynamically based on the current time (Morning, Noon, Evening, etc.).
+
 <img width="961" height="174" alt="1" src="https://github.com/user-attachments/assets/b3d76f4e-7ffb-4f7a-836a-e43d328922ed" />
 
-##### From validation message
+##### 2. From validation message
+
 <img width="1386" height="668" alt="2" src="https://github.com/user-attachments/assets/328d3f5b-f4f2-47b0-8c59-2e28cf68fa7d" />
 
-##### Not found message
+##### 3. Not found message
+
 <img width="1388" height="214" alt="3" src="https://github.com/user-attachments/assets/6090928d-1215-4c76-9112-8927571491ef" />
 
-##### Filter option
+##### 4. Filter option
+
 <img width="591" height="257" alt="4" src="https://github.com/user-attachments/assets/f80baad5-0be1-4402-ab86-f6ae5f86e514" />
 
-##### Credentials list view
+##### 5. Credentials list view
+
 <img width="1392" height="301" alt="5" src="https://github.com/user-attachments/assets/256370b5-e8ad-4b7f-935b-1b1312e04ec8" />
 
-##### After filter list view
+##### 6. After filter list view
+
 <img width="490" height="466" alt="6" src="https://github.com/user-attachments/assets/3ba8db07-d979-476b-9e57-6656493deb55" />
