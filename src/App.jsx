@@ -6,34 +6,34 @@ import MainContent from "./components/MainContent";
 
 const data = [
   {
-    faviconColor: "#3b82f6",
+    faviconColor: "#09b9dc",
     category: "Video",
     username: "learner_56",
-    password: "646464646",
-    id: "dafd08ab-cbf3-434a-ba25-a3f3a4a41870",
-    textIcon: "AP",
-    hostname: "apple.com",
-    domain: "Apple",
+    password: "sdfsafsfda",
+    id: "647c93b0-3a57-44b5-a833-634d6c393765",
+    textIcon: "GH",
+    hostname: "github.com",
+    domain: "GitHub",
   },
   {
-    faviconColor: "#3b82f6",
-    category: "Streaming",
-    username: "learner_56",
-    password: "646464646",
-    id: "355915d5-fd63-4afc-a9c3-06d6b619a0d0",
-    textIcon: "FB",
-    hostname: "facebook.com",
-    domain: "Facebook",
-  },
-  {
-    faviconColor: "#3b82f6",
-    category: "Streaming",
-    username: "learner_56",
-    password: "646464646",
-    id: "9d91aa7b-da0c-4156-91c6-dbc93a6882db",
+    faviconColor: "#db002c",
+    category: "Social",
+    username: "Jahid010825",
+    password: "sdfsdfsdfsdf",
+    id: "b427c5a6-ab3d-41b2-b602-1f4a48727516",
     textIcon: "YT",
     hostname: "youtube.com",
     domain: "YouTube",
+  },
+  {
+    faviconColor: "#3b82f6",
+    category: "Social",
+    username: "learner_56",
+    password: "dsafsdfsdf",
+    id: "067f1261-c113-435e-afd7-f56fb31d5ab7",
+    textIcon: "TC",
+    hostname: "tailwindcss.com",
+    domain: "Tailwind CSS",
   },
 ];
 
@@ -44,7 +44,6 @@ const App = () => {
     setPasswordsCardData((prevData) => [newData, ...prevData]);
   };
 
-  console.log(passwordsCardData);
   return (
     <>
       {/* Header */}

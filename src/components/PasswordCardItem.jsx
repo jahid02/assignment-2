@@ -8,7 +8,11 @@ const PasswordCardItem = ({ item }) => {
       <div className="flex items-start justify-between">
         <div className="flex items-center gap-4">
           <div
-            className={`flex h-12 w-12 items-center justify-center rounded-2xl border border-neutral-800 bg-[${faviconColor}] text-sm font-semibold uppercase text-[${faviconColor}]`}
+            className={`flex h-12 w-12 items-center justify-center rounded-2xl border border-neutral-800 text-sm font-semibold uppercase`}
+            style={{
+              color: faviconColor,
+              backgroundColor: `${faviconColor}1A`,
+            }}
           >
             {textIcon}
           </div>
