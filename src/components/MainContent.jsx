@@ -5,15 +5,15 @@ import Sort from "./Sort";
 
 const MainContent = ({ passwordsCardData }) => {
   const [search, setSearch] = useState("");
-  const [sortType, setSortType] = useState("asc");
+  const [sortOrder, setSortOrder] = useState("asc");
   const [sortBy, setSortBy] = useState("domain");
 
   const handleSearch = (e) => {
     setSearch(e.target.value);
   };
 
-  const handleSortType = (e) => {
-    setSortType(e.target.value);
+  const handleSortOrder = (e) => {
+    setSortOrder(e.target.value);
   };
 
   const handleSortBy = (e) => {
@@ -32,7 +32,7 @@ const MainContent = ({ passwordsCardData }) => {
     const valA = a[sortBy]?.toLowerCase() ?? "";
     const valB = b[sortBy]?.toLowerCase() ?? "";
 
-    return sortType === "asc" ? valA.localeCompare(valB) : valB.localeCompare(valA);
+    return sortOrder === "asc" ? valA.localeCompare(valB) : valB.localeCompare(valA);
   });
 
   return (
@@ -43,8 +43,7 @@ const MainContent = ({ passwordsCardData }) => {
           <div className="flex flex-col gap-4 lg:flex-row lg:items-center">
             {/* Search Bar */}
             <SearchInput handleSearch={handleSearch} />
-
-            <Sort handleSortType={handleSortType} handleSortBy={handleSortBy} />
+            <Sort handleSortOrder={handleSortOrder} handleSortBy={handleSortBy} />
           </div>
         </section>
 
