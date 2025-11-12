@@ -6,11 +6,11 @@ Please follow the below instructions to run this branch in your machine:
 
 2. Clone this repository -
    ```sh
-   git clone https://github.com/Learn-with-Sumit/rnext.git
+   git clone https://github.com/Learn-with-Sumit/batch-4-assignment-2-vault-manager-Jahid1499.git
    ```
 3. Go to the cloned project directory
    ```sh
-   cd rnext
+   cd batch-4-assignment-2-vault-manager-Jahid1499
    ```
 4. Just run this command to install node dependencies
    ```sh
